@@ -1,3 +1,12 @@
+// Time Complexity:
+// push()    - O(1), Directly insert at the top index
+// pop()     - O(1), Access and remove the top element
+// peek()    - O(1), Access the top element without removing
+// isEmpty() - O(1), Simple comparison check
+
+// Space Complexity:
+// O(n), where n = MAX (1000 in this case)
+
 class Stack {
     //Please read sample.java file before starting.
   //Kindly include Time and Space complexity at top of each file

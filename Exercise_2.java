@@ -1,4 +1,13 @@
-public class StackAsLinkedList { 
+// Time Complexity:
+// push() - O(1), Inserting at the head takes constant time
+// pop()  - O(1), Removing the top node (head) is also constant time
+// peek() - O(1), Accessing the top node without removing it
+// isEmpty() - O(1), Simple null check
+
+// Space Complexity:
+// O(n), where n is the number of elements in the stack
+
+public class StackAsLinkedList {
   
     StackNode root; 
   
