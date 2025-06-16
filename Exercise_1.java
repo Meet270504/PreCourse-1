@@ -1,4 +1,4 @@
-class Stack { 
+class Stack {
     //Please read sample.java file before starting.
   //Kindly include Time and Space complexity at top of each file
     static final int MAX = 1000; 
@@ -7,31 +7,46 @@ class Stack {
   
     boolean isEmpty() 
     { 
-        //Write your code here 
+        return top == -1; //
     } 
 
     Stack() 
     { 
-        //Initialize your constructor 
+        //Initialize your constructor
+        top = -1; // Stack is initially empty
     } 
   
     boolean push(int x) 
     { 
         //Check for stack Overflow
-        //Write your code here
+        if (top >= MAX - 1) {
+            System.out.println("Stack Overflow");
+            return false; // Stack is full
+        } else {
+            a[++top] = x; // Increment top and add element
+            return true;
+        }
     } 
   
     int pop() 
     { 
         //If empty return 0 and print " Stack Underflow"
-        //Write your code here
-    } 
-  
-    int peek() 
-    { 
-        //Write your code here
-    } 
-} 
+        if (isEmpty()) {
+            System.out.println("Stack Underflow");
+            return 0; // Stack is empty
+        } else {
+            return a[top--]; // Return the top element and decrement top
+        }
+    }
+
+    int peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        } else {
+            return a[top];
+        }
+    }
+}
   
 // Driver code 
 class Main { 
